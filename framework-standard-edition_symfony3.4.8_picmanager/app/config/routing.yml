@@ -1,0 +1,9 @@
+schroeder_pic_manager:
+    #resource: "@SchroederPicManagerBundle/Resources/config/routing.php"
+    resource: "@SchroederPicManagerBundle/Controller/"
+    #prefix:   /
+    type:     annotation
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

@@ -1,0 +1,16 @@
+  <table>
+  {% for c in picturesdescriptionsfilesysteparametersmetadata %}
+  <tr>
+      <td>{{ c.picturename }}</td>
+      <td>{{ c.picturepath }}</td>
+      <td>{{ c.description }}</td>
+      <td>{{ c.filectime|date('Y-m-d H:i:s')}}</td>
+      <td>{{ c.filesize }}</td>
+      <td>{{ c.exifImageModel }}</td>
+      <td>{{ c.exifPhotoFocallength }}</td>
+      <td>{{ "c.exifPhotoDatetimeoriginal|localizeddate('long', 'short')" }}</td>
+      <td>{{ c.exifPhotoFnumber }}</td>
+      <td>{{ c.exifPhotoExposuretime }}</td>
+  </tr>
+  {% endfor %}
+  </table>

@@ -1,0 +1,22 @@
+parameters:
+#    parameter_name: value
+    entity.Pictures: SchroederPicManagerBundle:Pictures
+    #mytest.entity: SchroederPicManagerBundle:Pictures
+    #mytest.class:  Schroeder\Bundle\PicManagerBundle\Entity\Pictures
+    ##default_repository.class: Doctrine\ORM\EntityRepository
+
+
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+     picmanager_pictures_repository:
+         class:  Schroeder\Bundle\PicManagerBundle\Repository\PicturesRepository
+         #arguments:  ["@another_service_name", "plain_value", "%parameter_name%"]
+         factory: ["@doctrine", getRepository]
+         arguments:
+            - %entity.Pictures%
+
+
